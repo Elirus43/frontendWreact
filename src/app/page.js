@@ -5,6 +5,7 @@ import Profile from "./components/Profile";
 import ProfileGreet from "./components/ProfileGreet";
 import Demo from "./components/Demo";
 import Greeting from "./components/Greeting";
+import UserProfile from "./components/conditional/UserProfile";
 
 export default function Home() {
   return (
@@ -19,14 +20,16 @@ export default function Home() {
           <Profile/>*/}
 
           {/* <ProfileGreet /> */}
-          <Greeting message={'Hello'}/>
+          {/*<Greeting message={'Hello'}/>
           <Greeting message={'Hi'}/>
 
           <Demo />
           <Profile
               avatar = 'https://wallpapers.com/images/featured/spiderman-p4ashmgeamn2mvkn.jpg'
               name = {'Leo'}
-          />
+          />*/}
+
+          <UserProfile role={'user'} /> {/* Best Practice*/}
       </main>
     </div>
   );
