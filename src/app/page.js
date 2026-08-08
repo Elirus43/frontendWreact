@@ -6,6 +6,7 @@ import ProfileGreet from "./components/ProfileGreet";
 import Demo from "./components/Demo";
 import Greeting from "./components/Greeting";
 import UserProfile from "./components/conditional/UserProfile";
+import ListDemo from "./components/list/ListDemo";
 
 export default function Home() {
   return (
@@ -30,6 +31,7 @@ export default function Home() {
           />*/}
 
           <UserProfile role={'user'} /> {/* Best Practice*/}
+          <ListDemo />
       </main>
     </div>
   );
