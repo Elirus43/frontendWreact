@@ -7,6 +7,7 @@ import Demo from "./components/Demo";
 import Greeting from "./components/Greeting";
 import UserProfile from "./components/conditional/UserProfile";
 import ListDemo from "./components/list/ListDemo";
+import Counter from "@/app/components/Counter";
 
 export default function Home() {
   return (
@@ -30,8 +31,9 @@ export default function Home() {
               name = {'Leo'}
           />*/}
 
-          <UserProfile role={'user'} /> {/* Best Practice*/}
-          <ListDemo />
+          {/*<UserProfile role={'user'} /> /!* Best Practice*!/*/}
+          {/*<ListDemo />*/}
+          <Counter />
       </main>
     </div>
   );
