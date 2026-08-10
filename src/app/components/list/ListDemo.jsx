@@ -1,7 +1,15 @@
-function TodoItems(props) {
+'use client';
+
+function TodoItem({todo}) {
+    const onClickHandler = (e) => {
+        console.log('Clicked ', e);
+        console.log('Todo ', todo);
+    }
+
     return <div>
-        {props.todo.title}
-    </div>;
+        {todo.title}
+        <button onClick={onClickHandler} type="button">Edit</button>
+    </div>
 }
 
 export default function ListDemo()
@@ -20,9 +28,10 @@ export default function ListDemo()
             title : "Study at 10am"
         },
     ];
+    console.log('Todo ', TodoItem({todo:{id:3, title:"Wake up at 8am"}}));
     return (<div>
         {
-            todos.map(todo => <TodoItems
+            todos.map(todo => <TodoItem
                 key={todo.id}
                 todo={todo}/>
             )}
