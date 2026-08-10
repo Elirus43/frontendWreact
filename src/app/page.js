@@ -8,6 +8,7 @@ import Greeting from "./components/Greeting";
 import UserProfile from "./components/conditional/UserProfile";
 import ListDemo from "./components/list/ListDemo";
 import Counter from "@/app/components/Counter";
+import Parent from "./components/Parent";
 
 export default function Home() {
   return (
@@ -33,7 +34,8 @@ export default function Home() {
 
           {/*<UserProfile role={'user'} /> /!* Best Practice*!/*/}
           {/*<ListDemo />*/}
-          <Counter />
+          {/*<Counter />*/}
+          <Parent />
       </main>
     </div>
   );
