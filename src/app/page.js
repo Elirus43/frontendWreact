@@ -10,6 +10,7 @@ import ListDemo from "./components/list/ListDemo";
 import Counter from "@/app/components/Counter";
 import Parent from "./components/Parent";
 import CounterTwo from "./components/CounterTwo";
+import ImmutableDemo from "./components/ImmutableDemo";
 
 export default function Home() {
   return (
@@ -37,7 +38,8 @@ export default function Home() {
           {/*<ListDemo />*/}
           {/*<Counter />*/}
           {/*<Parent />*/}
-          <CounterTwo />
+          {/*<CounterTwo />*/}
+          <ImmutableDemo />
       </main>
     </div>
   );
