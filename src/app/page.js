@@ -11,6 +11,7 @@ import Counter from "@/app/components/Counter";
 import Parent from "./components/Parent";
 import CounterTwo from "./components/CounterTwo";
 import ImmutableDemo from "./components/ImmutableDemo";
+import TodoItems from "./components/TodoItems";
 
 export default function Home() {
   return (
@@ -39,7 +40,8 @@ export default function Home() {
           {/*<Counter />*/}
           {/*<Parent />*/}
           {/*<CounterTwo />*/}
-          <ImmutableDemo />
+          {/*<ImmutableDemo />*/}
+          <TodoItems />
       </main>
     </div>
   );
