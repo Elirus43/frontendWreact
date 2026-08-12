@@ -19,11 +19,23 @@ const initialTodos = [
         name: 'Start Coding'
     }
 ];
+let id = 4;
 
+function getNextId ()
+{
+    return id++;
+}
 export default function TodoItems()
 {
-    const [todos, setTodos] = useState(initialTodos);
     console.log('TodoItems Render');
+    const [todos, setTodos] = useState(initialTodos);
+
+    const [todoTitle, setTodoTitle] = useState('');
+    console.log('Todo Title ', todoTitle);
+
+    const onTitleChange = (event) => {
+        setTodoTitle(event.target.value);
+    }
 
     const onUpdate = (todo) => {
         console.log('Todo Update ', todo);
@@ -31,15 +43,27 @@ export default function TodoItems()
             ...todo,
             name: todo.name + ' Update'
         }
-        setTodos(todos.map(td => td.id == todo.id ? updateTodo : td));
+        setTodos(todos.map(td => td.id === todo.id ? updateTodo : td));
     }
 
     const onDelete = (todo) => {
         console.log('Todo to Delete ',todo);
-        setTodos(todos.filter(td => td.id != todo.id));
+        setTodos(todos.filter(td => td.id !== todo.id));    /* Core Logic Here */
     }
 
+    const onCreate = () => {
+        let id = getNextId();
+        let newTodo = {
+            id,
+            name: todoTitle
+        }
+        setTodoTitle('')
+        setTodos([...todos, newTodo]);
+    }
     return (<div>
+        <input type="text" onChange={onTitleChange} value={todoTitle}  />
+
+        <button type={'button'} onClick={() => onCreate()}>New</button>
         {
             todos.map(todo => <div key = {todo.id}>
                 {todo.name}
