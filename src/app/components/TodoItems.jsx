@@ -63,7 +63,7 @@ export default function TodoItems()
     return (<div>
         <input type="text" onChange={onTitleChange} value={todoTitle}  />
 
-        <button type={'button'} onClick={() => onCreate()}>New</button>
+        <button type={'button'} onClick={() => onCreate()}>Add</button>
         {
             todos.map(todo => <div key = {todo.id}>
                 {todo.name}
