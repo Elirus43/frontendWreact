@@ -1,3 +1,4 @@
+'use client';
 import Image from "next/image";
 import styles from "./page.module.css";
 import HelloWorld from "./components/HelloWorld";
@@ -13,6 +14,7 @@ import CounterTwo from "./components/CounterTwo";
 import ImmutableDemo from "./components/ImmutableDemo";
 import TodoItems from "./components/TodoItems";
 import ItemsEntry from "./components/ItemsEntry";
+import TabDemo from "./components/tab/TabDemo";
 
 export default function Home() {
   return (
@@ -43,7 +45,8 @@ export default function Home() {
           {/*<CounterTwo />*/}
           {/*<ImmutableDemo />*/}
           {/*<TodoItems />*/}
-          <ItemsEntry />
+          {/*<ItemsEntry />*/}
+          <TabDemo />
       </main>
     </div>
   );
