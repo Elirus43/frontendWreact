@@ -2,11 +2,21 @@
     display: inline-block;
     min-width: 200px;
     cursor: pointer;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border: 2px solid lightgreen;
+    padding: 10px;
+    text-align: center;
+    background-color: lightcoral;
 }
 .tab-content {
     min-width: 200px;
     min-height: 500px;
     border: 1px solid black;
     padding: 10px;
-    border-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+.active-tab {
+    background-color: lightgreen;
 }
