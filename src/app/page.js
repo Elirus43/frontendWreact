@@ -15,6 +15,7 @@ import ImmutableDemo from "./components/ImmutableDemo";
 import TodoItems from "./components/TodoItems";
 import ItemsEntry from "./components/ItemsEntry";
 import TabDemo from "./components/tab/TabDemo";
+import TodoList from "./components/TodoList";
 
 export default function Home() {
   return (
@@ -46,7 +47,8 @@ export default function Home() {
           {/*<ImmutableDemo />*/}
           {/*<TodoItems />*/}
           {/*<ItemsEntry />*/}
-          <TabDemo />
+          {/*<TabDemo />*/}
+          <TodoList />
       </main>
     </div>
   );
