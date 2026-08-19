@@ -30,6 +30,7 @@ function TodoEntry({onAddTodo}) {
         if (e.key === "Enter") {
             // console.log("Enter key passed", todoText);
             onAddTodo(todoText);
+            setTodoText("");
         }
     }
     return (<div>
@@ -39,9 +40,12 @@ function TodoEntry({onAddTodo}) {
     </div>)
 }
 
-function TodoItem({todo}) {
+function TodoItem({todo, onDeleteTodo}) {
     return <div>
         {todo.title}
+        <button type={'button'} onClick={() => onDeleteTodo(todo)}>
+            Delete
+        </button>
     </div>;
 }
 
@@ -50,11 +54,25 @@ export default function TodoList() {
     const [todos, setTodos] = useState(initialTodos);
     const onAddTodo = (todoTitle) => {
         console.log('Add todo ', todoTitle);
+        let id = getNextId();
+        const newTodo = {
+            id,
+            title: todoTitle,
+        }
+        setTodos([...todos, newTodo]);
+    }
+    const onDeleteTodo = (todo) => {
+        console.log('Todo ', todo);
+        setTodos(todos.filter(td => td.id !== todo.id));
     }
     return (<div>
         <TodoEntry onAddTodo = {onAddTodo} />
         {
-            todos.map(todo => <TodoItem key={todo.id} todo={todo}/>)
+            todos.map(todo => <TodoItem
+                key={todo.id}
+                todo={todo}
+                onDeleteTodo={onDeleteTodo}
+            />)
         }
     </div>)
 }
