@@ -40,9 +40,40 @@ function TodoEntry({onAddTodo}) {
     </div>)
 }
 
-function TodoItem({todo, onDeleteTodo}) {
+function TodoItem({todo, onDeleteTodo, onUpdateTodo}) {
+    const [editing, setEditing] = useState(false);
+    const [todoText, setTodoText] = useState(todo.title);
+    const onDoubleClick = (event) => {
+        console.log('Edit Mode On');
+            setEditing(true);
+        };
+
+
+    const handleKeyDown = (e) => {
+        if (e.key === "Enter") {
+            // console.log("Enter key passed", todoText);
+            onUpdateTodo ({
+                id: todo.id,
+                title: todoText
+            })
+            // setTodoText("");
+            setEditing(false);
+        }
+    }
+
     return <div>
-        {todo.title}
+        {
+            !editing && <span onDoubleClick={onDoubleClick}>
+            {todo.title}
+            </span>
+        }
+        {
+            editing && <input type={'text'}
+                              value={todoText}
+                              onChange={(e) => setTodoText(e.target.value)}
+                              onKeyDown={handleKeyDown}/>
+        }
+        &nbsp; &nbsp;
         <button type={'button'} onClick={() => onDeleteTodo(todo)}>
             Delete
         </button>
@@ -61,9 +92,15 @@ export default function TodoList() {
         }
         setTodos([...todos, newTodo]);
     }
+
+    // Communication with Parents
     const onDeleteTodo = (todo) => {
         console.log('Todo ', todo);
         setTodos(todos.filter(td => td.id !== todo.id));
+    }
+    const onUpdateTodo = (todo) => {
+        console.log('Update Todo ', todo);
+        setTodos(todos.map(td => td.id === todo.id ? todo:td ));
     }
     return (<div>
         <TodoEntry onAddTodo = {onAddTodo} />
@@ -72,6 +109,7 @@ export default function TodoList() {
                 key={todo.id}
                 todo={todo}
                 onDeleteTodo={onDeleteTodo}
+                onUpdateTodo={onUpdateTodo}
             />)
         }
     </div>)
