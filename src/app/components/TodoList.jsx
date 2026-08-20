@@ -34,6 +34,7 @@ function TodoEntry({onAddTodo}) {
         }
     }
     return (<div>
+        <label>Enter new todo: </label>
         <input type={'text'} value={todoText} onChange={(e) => setTodoText(e.target.value)}
                onKeyDown={handleKeyDown} />
 

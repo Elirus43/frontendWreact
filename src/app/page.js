@@ -16,6 +16,7 @@ import TodoItems from "./components/TodoItems";
 import ItemsEntry from "./components/ItemsEntry";
 import TabDemo from "./components/tab/TabDemo";
 import TodoList from "./components/TodoList";
+import DifferentRoot from "./components/reconciliation/DifferentRoot";
 
 export default function Home() {
   return (
@@ -48,7 +49,8 @@ export default function Home() {
           {/*<TodoItems />*/}
           {/*<ItemsEntry />*/}
           {/*<TabDemo />*/}
-          <TodoList />
+          {/*<TodoList />*/}
+          <DifferentRoot/>
       </main>
     </div>
   );
