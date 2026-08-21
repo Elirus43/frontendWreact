@@ -18,6 +18,7 @@ import TabDemo from "./components/tab/TabDemo";
 import TodoList from "./components/TodoList";
 import DifferentRoot from "./components/reconciliation/DifferentRoot";
 import DifferentPosition from "./components/reconciliation/DifferentPosition";
+import DifferentProp from "@/app/components/reconciliation/DifferentProp";
 
 export default function Home() {
   return (
@@ -52,7 +53,8 @@ export default function Home() {
           {/*<TabDemo />*/}
           {/*<TodoList />*/}
           {/*<DifferentRoot/>*/}
-          <DifferentPosition />
+          {/*<DifferentPosition />*/}
+          <DifferentProp />
       </main>
     </div>
   );
