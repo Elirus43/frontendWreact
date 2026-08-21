@@ -19,6 +19,7 @@ import TodoList from "./components/TodoList";
 import DifferentRoot from "./components/reconciliation/DifferentRoot";
 import DifferentPosition from "./components/reconciliation/DifferentPosition";
 import DifferentProp from "@/app/components/reconciliation/DifferentProp";
+import SamePosition from "./components/reconciliation/SamePosition";
 
 export default function Home() {
   return (
@@ -54,7 +55,8 @@ export default function Home() {
           {/*<TodoList />*/}
           {/*<DifferentRoot/>*/}
           {/*<DifferentPosition />*/}
-          <DifferentProp />
+          {/*<DifferentProp />*/}
+          <SamePosition />
       </main>
     </div>
   );
