@@ -29,9 +29,9 @@ export default function SamePosition()
     return (
         <div>
             {isPlayerA ? (
-                <Counter person = "Itachi" />
+                <Counter key = {'itachi'} person = "Itachi" /> // State will reset even tho same position, key make different
             ): (
-                <Counter person = "Sasuke" />
+                <Counter key = {'sasuke'} person = "Sasuke" />
             )}
             <button onClick = {() => {setIsPlayerA(!isPlayerA)}}>
                 Next Player
