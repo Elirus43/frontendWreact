@@ -21,6 +21,7 @@ import DifferentPosition from "./components/reconciliation/DifferentPosition";
 import DifferentProp from "@/app/components/reconciliation/DifferentProp";
 import SamePosition from "./components/reconciliation/SamePosition";
 import CounterWithReducer from "./components/reducer/CounterWithReducer";
+import TodoWithReducer from "./components/reducer/TodoWithReducer";
 
 export default function Home() {
   return (
@@ -58,7 +59,8 @@ export default function Home() {
           {/*<DifferentPosition />*/}
           {/*<DifferentProp />*/}
           {/*<SamePosition />*/}
-          <CounterWithReducer />
+          {/*<CounterWithReducer />*/}
+          <TodoWithReducer/>
       </main>
     </div>
   );

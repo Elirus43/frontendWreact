@@ -24,7 +24,7 @@ function getNextId() {
     return id++;
 }
 
-function TodoEntry({onAddTodo}) {
+export function TodoEntry({onAddTodo}) {
     const [todoText, setTodoText] = useState("");
     const handleKeyDown = (e) => {
         if (e.key === "Enter") {
@@ -41,7 +41,7 @@ function TodoEntry({onAddTodo}) {
     </div>)
 }
 
-function TodoItem({todo, onDeleteTodo, onUpdateTodo}) {
+export function TodoItem({todo, onDeleteTodo, onUpdateTodo}) {
     const [editing, setEditing] = useState(false);
     const [todoText, setTodoText] = useState(todo.title);
     const onDoubleClick = (event) => {
