@@ -1,6 +1,6 @@
 import {useReducer, useState} from "react";
 import {TodoEntry} from "@/app/components/TodoList";
-import {todoReducer} from "@/app/components/reducer/TodoReducer";
+import {todoReducer} from "./todoReducer";
 import {TodoItem} from "@/app/components/TodoList";
 
 const initialTodos = [

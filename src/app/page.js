@@ -23,6 +23,7 @@ import SamePosition from "./components/reconciliation/SamePosition";
 import CounterWithReducer from "./components/reducer/CounterWithReducer";
 import TodoWithReducer from "./components/reducer/TodoWithReducer";
 import ContextDemo from "./components/context/ContextDemo";
+import TodoListWithContextDemo from "./components/context/TodoListWithContextDemo";
 
 export default function Home() {
   return (
@@ -62,7 +63,8 @@ export default function Home() {
           {/*<SamePosition />*/}
           {/*<CounterWithReducer />*/}
           {/*<TodoWithReducer/>*/}
-          <ContextDemo />
+          {/*<ContextDemo />*/}
+          <TodoListWithContextDemo />
       </main>
     </div>
   );
