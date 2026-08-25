@@ -24,6 +24,7 @@ import CounterWithReducer from "./components/reducer/CounterWithReducer";
 import TodoWithReducer from "./components/reducer/TodoWithReducer";
 import ContextDemo from "./components/context/ContextDemo";
 import TodoListWithContextDemo from "./components/context/TodoListWithContextDemo";
+import FilterableProductDemo from "./components/ProductsDemo/FilterableProductDemo";
 
 export default function Home() {
   return (
@@ -64,7 +65,8 @@ export default function Home() {
           {/*<CounterWithReducer />*/}
           {/*<TodoWithReducer/>*/}
           {/*<ContextDemo />*/}
-          <TodoListWithContextDemo />
+          {/*<TodoListWithContextDemo />*/}
+          <FilterableProductDemo/>
       </main>
     </div>
   );

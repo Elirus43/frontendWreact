@@ -1,0 +1,11 @@
+.product-row {
+
+}
+.product-item {
+    display: inline-block;
+    width: 200px;
+}
+.product-price {
+    display: inline-block;
+    width: 100px;
+}
