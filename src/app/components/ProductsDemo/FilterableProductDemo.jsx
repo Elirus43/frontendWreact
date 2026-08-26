@@ -13,14 +13,35 @@ const initData = [
     {category: "Vegetables", price: "$1", stocked: true, name: "Bean"},
 ]
 
-function SearchBar()
+function SearchBar({onFilter})
 {
+    // SearchBox and Stock check bind
+    const [formState, setFormState] = useState({
+        item: '',
+        inStock: false,
+    })
+    const onChangeHandler = (e) => {
+        setFormState({
+            ...formState,
+            item: e.target.value,
+        });
+        onFilter(formState);
+    }
+    const LabelonChangeHandler = (e) => {
+        setFormState({
+            ...formState,
+            inStock: e.target.checked,
+        });
+        onFilter(formState);
+    }
+    console.log('FormState ', formState)
+
     return (<div>
         <div>
-            <input type={'text'}/>
+            <input type={'text'} value={formState.item} onChange={onChangeHandler} />
         </div>
         <div>
-            <input type={'checkbox'} />
+            <input type={'checkbox'} value={formState.inStock} onChange={LabelonChangeHandler} />
             <label>Only show products in-stock</label>
         </div>
     </div>)
@@ -87,8 +108,11 @@ function ProductTable({items})
 
 export default function FilterableProductDemo() {
     const [items, setItems] = useState(initData);
+    const onFilter = (formState) => {
+        console.log('Filter Form State ', formState);
+    }
     return (<div>
-        <SearchBar />
+        <SearchBar onFilter={onFilter} />
         <ProductTable items={items} />
     </div>)
 }
