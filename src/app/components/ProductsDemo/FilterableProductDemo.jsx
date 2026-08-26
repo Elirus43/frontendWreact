@@ -1,5 +1,7 @@
 import {useState} from "react";
 import "./filterable-product.css"
+import classNames from "classnames";
+
 
 const initData = [
     // This is Dummy Data
@@ -27,8 +29,14 @@ function SearchBar()
 // ProductRow represent each item
 function ProductRow({item})
 {
+    // with dynamic css, and render conditionally
+    const productClass = classNames({
+        'product-item' : true,
+        'out-of-stock' : !item.stocked,
+    })
+
     return(<div className={"product-row"}>
-    <div className={"product-item"}>{item.name}</div>
+    <div className={productClass}>{item.name}</div>
     <div className={"product-price"}>{item.price}</div>
     </div>)
 }
@@ -37,7 +45,7 @@ function ProductCategoryRow({items})
 {
     let categoryName = items[0].category;
     return (<div>
-    <h4>{categoryName}</h4>
+    <h2 className={"product-category"}>{categoryName}</h2>
         {
             items.map((item, index) => <ProductRow key={index} item={item}/>)    //we don't have no id, so we use index for unique
         }

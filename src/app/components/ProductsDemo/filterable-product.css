@@ -1,9 +1,12 @@
-.product-row {
-
+.product-category {
+    text-align: center;
 }
 .product-item {
     display: inline-block;
     width: 200px;
+}
+.out-of-stock {
+    color: red;
 }
 .product-price {
     display: inline-block;
