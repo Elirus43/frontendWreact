@@ -52,13 +52,34 @@ function ProductCategoryRow({items})
     </div>)
 }
 
+// Group code logic
+function groupByCategory({items})
+{
+    let group = {};
+    for (const item of items)
+    {
+        if(group[item.category]) {
+            group[item.category].push(item);
+        }
+        else {
+            group[item.category] = [item];
+        }
+    }
+    return group;
+}
 
 function ProductTable({items})
 {
+    const group = groupByCategory({items});
+    console.log("Group", group);
+    const categories = Object.keys(group);
+    console.log("Categories", categories);
+
     // Parent -> Child data passing
     return (<div>
-        <ProductCategoryRow items={items} />
-        <ProductCategoryRow items={items} />
+        {
+            categories.map((category, index) => <ProductCategoryRow key={index} items={group[category]}/>)
+        }
     </div>)
 }
 
