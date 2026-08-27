@@ -26,6 +26,7 @@ function SearchBar({onFilter})
             item: e.target.value,
         });
         onFilter(formState);
+
     }
     const LabelonChangeHandler = (e) => {
         setFormState({
@@ -104,13 +105,24 @@ function ProductTable({items})
     </div>)
 }
 
+// Filter item section, filter with name, then with stock availability
+function filterItemByName (items, name) {
+    return items.filter(item => item.name.includes(name));
+}
+function filterItemByStock (items, stocked) {
+    return items.filter(item => item.stocked === stocked);
+}
 
 
 export default function FilterableProductDemo() {
     const [items, setItems] = useState(initData);
     const onFilter = (formState) => {
         console.log('Filter Form State ', formState);
+        let newItems = filterItemByName(initData, formState.item);
+        // newItems = filterItemByStock(newItems, formState.inStock);
+        setItems(newItems);
     }
+
     return (<div>
         <SearchBar onFilter={onFilter} />
         <ProductTable items={items} />
