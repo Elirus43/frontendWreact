@@ -25,7 +25,10 @@ function SearchBar({onFilter})
             ...formState,
             item: e.target.value,
         });
-        onFilter(formState);
+        onFilter({
+            ...formState,
+            item: e.target.value,
+        });
 
     }
     const LabelonChangeHandler = (e) => {
@@ -33,7 +36,10 @@ function SearchBar({onFilter})
             ...formState,
             inStock: e.target.checked,
         });
-        onFilter(formState);
+        onFilter({
+            ...formState,
+            inStock: e.target.checked,
+        });
     }
     console.log('FormState ', formState)
 
@@ -107,10 +113,23 @@ function ProductTable({items})
 
 // Filter item section, filter with name, then with stock availability
 function filterItemByName (items, name) {
-    return items.filter(item => item.name.includes(name));
+    console.log('filterItemsByName ',name ,' items ',items);
+    if(name==='')
+    {
+        console.log('Name empty ',name);
+        return [...items];
+    }
+    return items.filter(item=>item.name.includes(name));
 }
 function filterItemByStock (items, stocked) {
-    return items.filter(item => item.stocked === stocked);
+    console.log('filterItemByStock ',items , 'stocked ',stocked );
+    if(stocked){
+        return items.filter(item=>item.stocked );
+    }
+    else
+    {
+        return [...items];
+    }
 }
 
 
@@ -118,8 +137,9 @@ export default function FilterableProductDemo() {
     const [items, setItems] = useState(initData);
     const onFilter = (formState) => {
         console.log('Filter Form State ', formState);
-        let newItems = filterItemByName(initData, formState.item);
-        // newItems = filterItemByStock(newItems, formState.inStock);
+
+        let newItems = filterItemByStock(initData, formState.inStock);
+        newItems = filterItemByName(newItems, formState.item);
         setItems(newItems);
     }
 
