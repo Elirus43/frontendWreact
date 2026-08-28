@@ -25,6 +25,8 @@ import TodoWithReducer from "./components/reducer/TodoWithReducer";
 import ContextDemo from "./components/context/ContextDemo";
 import TodoListWithContextDemo from "./components/context/TodoListWithContextDemo";
 import FilterableProductDemo from "./components/ProductsDemo/FilterableProductDemo";
+import WhyRef from "./components/WhyRef";
+import Timer from "./components/Timer";
 
 export default function Home() {
   return (
@@ -66,7 +68,9 @@ export default function Home() {
           {/*<TodoWithReducer/>*/}
           {/*<ContextDemo />*/}
           {/*<TodoListWithContextDemo />*/}
-          <FilterableProductDemo/>
+          {/*<FilterableProductDemo/>*/}
+          {/*<WhyRef />*/}
+          <Timer/>
       </main>
     </div>
   );
