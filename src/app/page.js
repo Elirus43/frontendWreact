@@ -27,6 +27,8 @@ import TodoListWithContextDemo from "./components/context/TodoListWithContextDem
 import FilterableProductDemo from "./components/ProductsDemo/FilterableProductDemo";
 import WhyRef from "./components/WhyRef";
 import Timer from "./components/Timer";
+import FocusInput from "./components/FocusInput";
+import MyInputParent from "./components/MyInputParent";
 
 export default function Home() {
   return (
@@ -70,7 +72,9 @@ export default function Home() {
           {/*<TodoListWithContextDemo />*/}
           {/*<FilterableProductDemo/>*/}
           {/*<WhyRef />*/}
-          <Timer/>
+          {/*<Timer/>*/}
+          {/*<FocusInput/>*/}
+          <MyInputParent />
       </main>
     </div>
   );
