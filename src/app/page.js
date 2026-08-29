@@ -31,6 +31,8 @@ import FocusInput from "./components/FocusInput";
 import MyInputParent from "./components/MyInputParent";
 import VideoPlayer from "./components/VideoPlayer";
 import EffectDemo from "./components/effect/EffectDemo";
+import Clock from "./components/effect/Clock";
+import CleanUp from "./components/effect/CleanUp";
 
 export default function Home() {
   return (
@@ -78,7 +80,9 @@ export default function Home() {
           {/*<FocusInput/>*/}
           {/*<MyInputParent />*/}
           {/*<VideoPlayer/>*/}
-          <EffectDemo/>
+          {/*<EffectDemo/>*/}
+          {/*<Clock/>*/}
+          <CleanUp/>
       </main>
     </div>
   );
