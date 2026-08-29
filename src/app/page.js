@@ -29,6 +29,7 @@ import WhyRef from "./components/WhyRef";
 import Timer from "./components/Timer";
 import FocusInput from "./components/FocusInput";
 import MyInputParent from "./components/MyInputParent";
+import VideoPlayer from "./components/VideoPlayer";
 
 export default function Home() {
   return (
@@ -74,7 +75,8 @@ export default function Home() {
           {/*<WhyRef />*/}
           {/*<Timer/>*/}
           {/*<FocusInput/>*/}
-          <MyInputParent />
+          {/*<MyInputParent />*/}
+          <VideoPlayer/>
       </main>
     </div>
   );
