@@ -30,6 +30,7 @@ import Timer from "./components/Timer";
 import FocusInput from "./components/FocusInput";
 import MyInputParent from "./components/MyInputParent";
 import VideoPlayer from "./components/VideoPlayer";
+import EffectDemo from "./components/effect/EffectDemo";
 
 export default function Home() {
   return (
@@ -76,7 +77,8 @@ export default function Home() {
           {/*<Timer/>*/}
           {/*<FocusInput/>*/}
           {/*<MyInputParent />*/}
-          <VideoPlayer/>
+          {/*<VideoPlayer/>*/}
+          <EffectDemo/>
       </main>
     </div>
   );
