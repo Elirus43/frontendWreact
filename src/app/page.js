@@ -33,6 +33,7 @@ import VideoPlayer from "./components/VideoPlayer";
 import EffectDemo from "./components/effect/EffectDemo";
 import Clock from "./components/effect/Clock";
 import CleanUp from "./components/effect/CleanUp";
+import TodoWithFetch from "./components/effect/TodoWithFetch";
 
 export default function Home() {
   return (
@@ -82,7 +83,8 @@ export default function Home() {
           {/*<VideoPlayer/>*/}
           {/*<EffectDemo/>*/}
           {/*<Clock/>*/}
-          <CleanUp/>
+          {/*<CleanUp/>*/}
+          <TodoWithFetch/>
       </main>
     </div>
   );
