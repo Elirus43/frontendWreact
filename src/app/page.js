@@ -77,7 +77,7 @@ export default function Home() {
           {/*<ContextDemo />*/}
           {/*<TodoListWithContextDemo />*/}
           {/*<FilterableProductDemo/>*/}
-          {/*<WhyRef />*/}
+          <WhyRef />
           {/*<Timer/>*/}
           {/*<FocusInput/>*/}
           {/*<MyInputParent />*/}
@@ -85,7 +85,7 @@ export default function Home() {
           {/*<EffectDemo/>*/}
           {/*<Clock/>*/}
           {/*<CleanUp/>*/}
-          <TodoWithFetch/>
+          {/*<TodoWithFetch/>*/}
           {/*<UserWithFetch />*/}
       </main>
     </div>
