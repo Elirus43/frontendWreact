@@ -1,16 +1,15 @@
-import {useEffect, useState} from "react";
+import useFetch from "../hook/useFetch";
 
 export default function TodoWithFetch()
 {
-    const [todos, setTodos] = useState([]);
-    console.log('Render');
-    useEffect(() => {
-        fetch('https://jsonplaceholder.typicode.com/todos')
-            .then(res => res.json())
-        .then(data => setTodos(data))
-    }, [])  // Prevent render again & again with dependency
+    const [data, loading, error] = useFetch('https://jsonplaceholder.typicode.com/todos');
     return (<div>
-        {todos.map(td => <div key={td.id}>
+
+        {loading && <h1>Loading...</h1>}
+        <h2>Todos</h2>
+        {error && <p>{error.message}</p>}
+
+        {data.map(td => <div key={td.id}>
             {td.title}
         </div>)}
     </div>)

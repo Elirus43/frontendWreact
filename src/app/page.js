@@ -34,6 +34,7 @@ import EffectDemo from "./components/effect/EffectDemo";
 import Clock from "./components/effect/Clock";
 import CleanUp from "./components/effect/CleanUp";
 import TodoWithFetch from "./components/effect/TodoWithFetch";
+import UserWithFetch from "./components/hook/UserWithFetch";
 
 export default function Home() {
   return (
@@ -85,6 +86,7 @@ export default function Home() {
           {/*<Clock/>*/}
           {/*<CleanUp/>*/}
           <TodoWithFetch/>
+          {/*<UserWithFetch />*/}
       </main>
     </div>
   );
