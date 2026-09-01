@@ -73,11 +73,11 @@ export default function Home() {
           {/*<DifferentProp />*/}
           {/*<SamePosition />*/}
           {/*<CounterWithReducer />*/}
-          {/*<TodoWithReducer/>*/}
+          <TodoWithReducer/>
           {/*<ContextDemo />*/}
           {/*<TodoListWithContextDemo />*/}
           {/*<FilterableProductDemo/>*/}
-          <WhyRef />
+          {/*<WhyRef />*/}
           {/*<Timer/>*/}
           {/*<FocusInput/>*/}
           {/*<MyInputParent />*/}

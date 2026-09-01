@@ -2,6 +2,7 @@ import {useReducer, useState} from "react";
 import {TodoEntry} from "@/app/components/TodoList";
 import {todoReducer} from "./todoReducer";
 import {TodoItem} from "@/app/components/TodoList";
+import useCustomReducer from "../hook/useCustomReducer";
 
 const initialTodos = [
     {
@@ -28,7 +29,8 @@ const onAddTodo = (title) => {
 }
 
 export default function TodoWithReducer() {
-    const [todos, dispatch] = useReducer(todoReducer, initialTodos);
+    // const [todos, dispatch] = useReducer(todoReducer, initialTodos);
+    const [todos, dispatch] = useCustomReducer(todoReducer, initialTodos);
     const onAddTodo = (title) => {
         console.log('Add todo ', title);
         let id = getNextId();
