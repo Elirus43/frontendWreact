@@ -35,6 +35,7 @@ import Clock from "./components/effect/Clock";
 import CleanUp from "./components/effect/CleanUp";
 import TodoWithFetch from "./components/effect/TodoWithFetch";
 import UserWithFetch from "./components/hook/UserWithFetch";
+import FragmentDemo from "./components/FragmentDemo";
 
 export default function Home() {
   return (
@@ -73,7 +74,7 @@ export default function Home() {
           {/*<DifferentProp />*/}
           {/*<SamePosition />*/}
           {/*<CounterWithReducer />*/}
-          <TodoWithReducer/>
+          {/*<TodoWithReducer/>*/}
           {/*<ContextDemo />*/}
           {/*<TodoListWithContextDemo />*/}
           {/*<FilterableProductDemo/>*/}
@@ -87,6 +88,7 @@ export default function Home() {
           {/*<CleanUp/>*/}
           {/*<TodoWithFetch/>*/}
           {/*<UserWithFetch />*/}
+          <FragmentDemo/>
       </main>
     </div>
   );
