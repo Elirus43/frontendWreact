@@ -37,6 +37,8 @@ import TodoWithFetch from "./components/effect/TodoWithFetch";
 import UserWithFetch from "./components/hook/UserWithFetch";
 import FragmentDemo from "./components/FragmentDemo";
 import SimpleLoginForm from "@/app/components/HooK_Form/SimpleLoginForm";
+import SimpleForm from "@/app/components/HooK_Form/SimpleForm";
+import SimpleFormWithCustomHook from "./components/HooK_Form/SimpleFormWithCustomHook";
 
 export default function Home() {
   return (
@@ -90,7 +92,9 @@ export default function Home() {
           {/*<TodoWithFetch/>*/}
           {/*<UserWithFetch />*/}
           {/*<FragmentDemo/>*/}
-          <SimpleLoginForm/>
+          {/*<SimpleLoginForm/>*/}
+          {/*<SimpleForm />*/}
+          <SimpleFormWithCustomHook/>
       </main>
     </div>
   );
