@@ -39,6 +39,7 @@ import FragmentDemo from "./components/FragmentDemo";
 import SimpleLoginForm from "@/app/components/HooK_Form/SimpleLoginForm";
 import SimpleForm from "@/app/components/HooK_Form/SimpleForm";
 import SimpleFormWithCustomHook from "./components/HooK_Form/SimpleFormWithCustomHook";
+import SignupForm from "@/app/components/HooK_Form/SignupForm";
 
 export default function Home() {
   return (
@@ -94,7 +95,8 @@ export default function Home() {
           {/*<FragmentDemo/>*/}
           {/*<SimpleLoginForm/>*/}
           {/*<SimpleForm />*/}
-          <SimpleFormWithCustomHook/>
+          {/*<SimpleFormWithCustomHook/>*/}
+          <SignupForm/>
       </main>
     </div>
   );
