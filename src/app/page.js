@@ -40,6 +40,8 @@ import SimpleLoginForm from "@/app/components/HooK_Form/SimpleLoginForm";
 import SimpleForm from "@/app/components/HooK_Form/SimpleForm";
 import SimpleFormWithCustomHook from "./components/HooK_Form/SimpleFormWithCustomHook";
 import SignupForm from "@/app/components/HooK_Form/SignupForm";
+import WhyHocDemo from "./components/pattern/hoc/WhyHOCDemo";
+import WithHOC from "./components/pattern/hoc/WithHOC";
 
 export default function Home() {
   return (
@@ -96,7 +98,9 @@ export default function Home() {
           {/*<SimpleLoginForm/>*/}
           {/*<SimpleForm />*/}
           {/*<SimpleFormWithCustomHook/>*/}
-          <SignupForm/>
+          {/*<SignupForm/>*/}
+          {/*<WhyHocDemo/>*/}
+          <WithHOC/>
       </main>
     </div>
   );
