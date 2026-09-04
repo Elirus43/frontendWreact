@@ -42,6 +42,7 @@ import SimpleFormWithCustomHook from "./components/HooK_Form/SimpleFormWithCusto
 import SignupForm from "@/app/components/HooK_Form/SignupForm";
 import WhyHocDemo from "./components/pattern/hoc/WhyHOCDemo";
 import WithHOC from "./components/pattern/hoc/WithHOC";
+import WhyRenderProp from "./components/pattern/render property/WhyRenderProp";
 
 export default function Home() {
   return (
@@ -100,7 +101,8 @@ export default function Home() {
           {/*<SimpleFormWithCustomHook/>*/}
           {/*<SignupForm/>*/}
           {/*<WhyHocDemo/>*/}
-          <WithHOC/>
+          {/*<WithHOC/>*/}
+          <WhyRenderProp/>
       </main>
     </div>
   );
