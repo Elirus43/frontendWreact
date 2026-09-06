@@ -1,5 +1,5 @@
 
-/*
+
 config=[
     {
         name: 'Home',
@@ -12,7 +12,7 @@ config=[
         component:Movie
     },
 ]
-* */
+
 import {useState} from "react";
 
 export default function Router({config}) {
